@@ -1,65 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
 function App() {
-  const [priceData, setPriceData] = useState(null);
-
-  useEffect(() => {
-    const fetchPrice = async () => {
-      try {
-        const response = await fetch('https://api.dexscreener.com/latest/dex/pairs/base/0x09488feD72D063Bf36784ffEFBDF57A6ec81Ad9b');
-        const data = await response.json();
-        if (data.pair) {
-          setPriceData({
-            price: parseFloat(data.pair.priceUsd).toFixed(6),
-            change24h: parseFloat(data.pair.priceChange.h24).toFixed(2),
-            volume24h: parseFloat(data.pair.volume.h24).toLocaleString('en-US', { maximumFractionDigits: 0 }),
-            liquidity: parseFloat(data.pair.liquidity.usd).toLocaleString('en-US', { maximumFractionDigits: 0 })
-          });
-        }
-      } catch (error) {
-        console.error('Error fetching price:', error);
-      }
-    };
-
-    fetchPrice();
-    const interval = setInterval(fetchPrice, 30000); // Update every 30 seconds
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="app">
-      {priceData && (
-        <div className="price-ticker">
-          <div className="ticker-content">
-            <span className="ticker-item">
-              <strong>$PONY</strong> ${priceData.price}
-            </span>
-            <span className={`ticker-item ${priceData.change24h >= 0 ? 'positive' : 'negative'}`}>
-              24h: {priceData.change24h >= 0 ? '+' : ''}{priceData.change24h}%
-            </span>
-            <span className="ticker-item">
-              Vol: ${priceData.volume24h}
-            </span>
-            <span className="ticker-item">
-              Liq: ${priceData.liquidity}
-            </span>
-            {/* Duplicate for seamless loop */}
-            <span className="ticker-item">
-              <strong>$PONY</strong> ${priceData.price}
-            </span>
-            <span className={`ticker-item ${priceData.change24h >= 0 ? 'positive' : 'negative'}`}>
-              24h: {priceData.change24h >= 0 ? '+' : ''}{priceData.change24h}%
-            </span>
-            <span className="ticker-item">
-              Vol: ${priceData.volume24h}
-            </span>
-            <span className="ticker-item">
-              Liq: ${priceData.liquidity}
-            </span>
-          </div>
-        </div>
-      )}
       <header className="header">
         <img src="/logo.png" alt="Pony Labs" className="logo" />
         <h1 className="title visually-hidden">Pony Labs</h1>
@@ -98,14 +42,18 @@ function App() {
                 <span className="product-link">Visit deveats.com →</span>
               </div>
             </a>
+          </div>
+        </div>
+      </section>
 
-            <a href="https://dexscreener.com/base/0x09488feD72D063Bf36784ffEFBDF57A6ec81Ad9b" className="product-card" target="_blank" rel="noopener noreferrer">
-              <div className="product-content">
-                <h3>$PONY Token</h3>
-                <p>Track our token metrics, liquidity, and trading activity on DexScreener.</p>
-                <span className="product-link">View on DexScreener →</span>
-              </div>
-            </a>
+      <section className="blog">
+        <div className="container">
+          <h2>Blog</h2>
+          <div className="blog-grid">
+            <article className="blog-card">
+              <h3>Coming Soon</h3>
+              <p>Insights on game design, crypto economics, and the future of blockchain gaming.</p>
+            </article>
           </div>
         </div>
       </section>

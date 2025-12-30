@@ -6,53 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Price Ticker */
-.price-ticker {
-  background: #000000;
-  color: #ffffff;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 0.75rem 0;
-  border-bottom: 2px solid #000000;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.ticker-content {
-  display: inline-block;
-  animation: scroll 30s linear infinite;
-  padding-left: 100%;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.ticker-item {
-  display: inline-block;
-  margin-right: 3rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.ticker-item strong {
-  font-weight: 700;
-}
-
-.ticker-item.positive {
-  color: #00ff00;
-}
-
-.ticker-item.negative {
-  color: #ff4444;
-}
-
 /* Accessibility: Hide visually but keep for screen readers and SEO */
 .visually-hidden {
   position: absolute;
@@ -194,6 +147,33 @@ p {
   font-weight: 600;
   opacity: 0.7;
   transition: opacity 0.2s ease;
+}
+
+/* Blog Section */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.blog-card {
+  padding: 3rem 2rem;
+  border: 2px solid #000000;
+  transition: all 0.2s ease;
+}
+
+.blog-card:hover {
+  background: #f5f5f5;
+  transform: translateY(-4px);
+}
+
+.blog-card h3 {
+  margin-bottom: 1rem;
+}
+
+.blog-card p {
+  margin-bottom: 0;
 }
 
 /* Philosophy Section */
