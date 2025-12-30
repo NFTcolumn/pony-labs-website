@@ -6,6 +6,53 @@
   box-sizing: border-box;
 }
 
+/* Price Ticker */
+.price-ticker {
+  background: #000000;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+  padding-left: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-item {
+  display: inline-block;
+  margin-right: 3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.ticker-item strong {
+  font-weight: 700;
+}
+
+.ticker-item.positive {
+  color: #00ff00;
+}
+
+.ticker-item.negative {
+  color: #ff4444;
+}
+
 /* Accessibility: Hide visually but keep for screen readers and SEO */
 .visually-hidden {
   position: absolute;
