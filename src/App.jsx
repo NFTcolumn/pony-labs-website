@@ -42,6 +42,14 @@ function App() {
                 <span className="product-link">Visit deveats.com →</span>
               </div>
             </a>
+
+            <a href="https://dexscreener.com/base/0x09488feD72D063Bf36784ffEFBDF57A6ec81Ad9b" className="product-card" target="_blank" rel="noopener noreferrer">
+              <div className="product-content">
+                <h3>$PONY Token</h3>
+                <p>Track our token metrics, liquidity, and trading activity on DexScreener.</p>
+                <span className="product-link">View on DexScreener →</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
