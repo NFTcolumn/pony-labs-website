@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <img src="/logo.png" alt="Pony Labs" className="logo" />
+        <a href="https://dexscreener.com/base/0x09488feD72D063Bf36784ffEFBDF57A6ec81Ad9b" target="_blank" rel="noopener noreferrer">
+          <img src="/logo.png" alt="Pony Labs" className="logo" />
+        </a>
         <h1 className="title visually-hidden">Pony Labs</h1>
       </header>
 
@@ -42,18 +44,6 @@ function App() {
                 <span className="product-link">Visit deveats.com →</span>
               </div>
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="blog">
-        <div className="container">
-          <h2>Blog</h2>
-          <div className="blog-grid">
-            <article className="blog-card">
-              <h3>Coming Soon</h3>
-              <p>Insights on game design, crypto economics, and the future of blockchain gaming.</p>
-            </article>
           </div>
         </div>
       </section>
