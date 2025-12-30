@@ -1,0 +1,251 @@
+/* Minimal Black on White Design - Paul Rand Inspired */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Accessibility: Hide visually but keep for screen readers and SEO */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.app {
+  background: #ffffff;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 1.5rem 2rem 1rem;
+  max-height: 250px;
+}
+
+.logo {
+  max-width: 210px;
+  max-height: 105px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Sections */
+section {
+  padding: 100px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Mission Section */
+.mission {
+  text-align: center;
+}
+
+.mission p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Products Section */
+.products {
+  padding-bottom: 200px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  display: block;
+  padding: 3rem 2rem;
+  border: 2px solid #000000;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.product-card:hover .product-link {
+  opacity: 1;
+}
+
+.product-content h3 {
+  margin-bottom: 1rem;
+}
+
+.product-content p {
+  margin-bottom: 1.5rem;
+}
+
+.product-link {
+  display: inline-block;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+/* Philosophy Section */
+.philosophy {
+  background: #000000;
+  color: #ffffff;
+}
+
+.philosophy h2 {
+  color: #ffffff;
+}
+
+blockquote {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem 0;
+}
+
+cite {
+  display: block;
+  font-size: 1rem;
+  font-style: normal;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.principle {
+  padding: 2rem 0;
+}
+
+.principle h3 {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Vision Section */
+.vision {
+  text-align: center;
+}
+
+.vision p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #000000;
+  color: #ffffff;
+  border-top: 2px solid #000000;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.footer .small {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+  }
+
+  .product-grid,
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  .header {
+    padding: 3rem 1rem 2rem;
+  }
+}
