@@ -27,22 +27,21 @@ function App() {
 
       <section className="products">
         <div className="container">
-          <h2>Our Products</h2>
+          <h2>Our Games</h2>
           <div className="product-grid">
             <a href="https://pxpony.com" className="product-card" target="_blank" rel="noopener noreferrer">
-              <div className="product-content">
-                <h3>PxPony</h3>
-                <p>On-chain racing game with real economic mechanics. Race, compete, and learn.</p>
-                <span className="product-link">Visit pxpony.com →</span>
-              </div>
+              <img src="/PIXEL PONY Logo.png" alt="Pixel Ponies" className="product-icon" />
+              <h3>Pixel Ponies</h3>
             </a>
 
-            <a href="https://deveats.com" className="product-card" target="_blank" rel="noopener noreferrer">
-              <div className="product-content">
-                <h3>DevEats</h3>
-                <p>Where developers meet, eat, and build together. Community-driven dining.</p>
-                <span className="product-link">Visit deveats.com →</span>
-              </div>
+            <a href="https://pistol.pxpony.com" className="product-card" target="_blank" rel="noopener noreferrer">
+              <img src="/PISTOL PONY Logo.png" alt="Pistol Ponies" className="product-icon" />
+              <h3>Pistol Ponies</h3>
+            </a>
+
+            <a href="https://t.me/Ponygatchi_bot" className="product-card" target="_blank" rel="noopener noreferrer">
+              <img src="/PONYGATCHI Logo.png" alt="Ponygatchi" className="product-icon" />
+              <h3>Ponygatchi</h3>
             </a>
           </div>
         </div>
